@@ -6,6 +6,7 @@ import SignupPage from './Screens/SignupPage'
 import VerifyMail from './Screens/VerifyMail';
 import ResetPass from './Screens/ResetPass';
 import ChangePass from './Screens/ChangePass';
+import Home from './Screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -65,6 +66,17 @@ const App = () =>
             {
               fontSize: 25,
               color: 'red',
+            },
+            headerTitleAlign: 'center'
+          }}
+       />
+
+    <Stack.Screen name="Home Page" component={Home} 
+        options={{
+            headerTitleStyle:
+            {
+              fontSize: 25,
+              color: 'blue',
             },
             headerTitleAlign: 'center'
           }}

@@ -37,9 +37,14 @@ const LoginPage = ({navigation}) =>
               });
 
              const result = await response.json();
-            //  console.log("Evening", result);
+             console.log("Evening", result);
 
              setResponse_Msg(result.message);
+
+             if(result.status)
+             {
+                navigation.navigate('Home Page', result.data.user);
+             }
         } 
         catch (error)
         {
